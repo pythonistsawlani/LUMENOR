@@ -42,7 +42,7 @@ export default function Waitlist() {
                 className={`h-full p-6 transition-all duration-300 border ${
                   selectedRole === role.id 
                     ? 'bg-amber-500/10 border-amber-500/50 shadow-[0_0_30px_rgba(245,166,35,0.15)]' 
-                    : 'bg-gray-100 border-white/10 hover:border-white/20 hover:bg-white/10'
+                    : 'bg-white/5 border-white/10 hover:border-white/20 hover:bg-white/10'
                 }`}
                 glowColor={selectedRole === role.id ? 'rgba(245, 166, 35, 0.3)' : 'rgba(255, 255, 255, 0.1)'}
               >
@@ -71,7 +71,7 @@ export default function Waitlist() {
               placeholder="name@company.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-gray-100 border border-white/10 rounded-full px-6 py-4 text-text-primary placeholder:text-text-muted outline-none focus:border-amber-500/50 focus:bg-white/10 transition-all peer"
+              className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-text-primary placeholder:text-text-muted outline-none focus:border-amber-500/50 focus:bg-white/10 transition-all peer"
               required
             />
             {/* Animated underline focus effect */}
