@@ -29,7 +29,7 @@ export default function Intelligence() {
             duration: 0.8,
             ease: 'power1.inOut'
           },
-          end: () => "+=" + wrapperRef.current?.offsetWidth * 2
+          end: () => "+=" + (wrapperRef.current?.offsetWidth || window.innerWidth) * 2
         }
       });
     });

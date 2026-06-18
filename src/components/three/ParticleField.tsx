@@ -61,10 +61,10 @@ export default function ParticleField({ progress = 0, particleCount = 3000 }: Pa
   return (
     <points ref={pointsRef}>
       <bufferGeometry>
-        <bufferAttribute attach="attributes-position" count={particleCount} array={positions} itemSize={3} />
-        <bufferAttribute attach="attributes-aSize" count={particleCount} array={sizes} itemSize={1} />
-        <bufferAttribute attach="attributes-aAlpha" count={particleCount} array={alphas} itemSize={1} />
-        <bufferAttribute attach="attributes-aSpeed" count={particleCount} array={speeds} itemSize={1} />
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
+        <bufferAttribute attach="attributes-aSize" args={[sizes, 1]} />
+        <bufferAttribute attach="attributes-aAlpha" args={[alphas, 1]} />
+        <bufferAttribute attach="attributes-aSpeed" args={[speeds, 1]} />
       </bufferGeometry>
       <shaderMaterial
         ref={materialRef}
