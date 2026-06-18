@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #030305;
+  --foreground: #ededed;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
 }
+
+.font-heading {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+.text-display-lg {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+@media (min-width: 768px) {
+  .text-display-lg { font-size: 6rem; }
+}
+@media (min-width: 1024px) {
+  .text-display-lg { font-size: 8rem; }
+}
+
+.text-display-md {
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+@media (min-width: 768px) {
+  .text-display-md { font-size: 4.5rem; }
+}
+@media (min-width: 1024px) {
+  .text-display-md { font-size: 6rem; }
+}
+
+.text-display-sm {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.025em;
+}
+@media (min-width: 768px) {
+  .text-display-sm { font-size: 3rem; line-height: 1; }
+}
+@media (min-width: 1024px) {
+  .text-display-sm { font-size: 3.75rem; line-height: 1; }
+}
+
+.bg-void { background-color: #030305; }
+.text-text-primary { color: #ededed; }
+.text-text-secondary { color: #a1a1aa; }
+.text-text-muted { color: #71717a; }
